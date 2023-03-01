@@ -1,0 +1,74 @@
+EBBR_ATIS:Brussels ATIS:132.475:BX:-:EBBR:ATIS:-:-:0000:0000
+
+Brussels Delivery:Brussels Delivery:121.950:BDL:-:EBBR:DEL:-:-:7101:7127
+
+Brussels South/Combined Ground:Brussels Ground:121.875:BG:-:EBBR:GND:-:-:7101:7127
+Brussels North Ground:Brussels Ground:118.050:BGN:N:EBBR:GND:-:-:7101:7127
+
+Brussels South/Combined Tower:Brussels Tower:118.600:BT:-:EBBR:TWR:-:-:7101:7127
+Brussels North Tower:Brussels Tower:120.775:BTN:N:EBBR:TWR:-:-:7101:7127
+
+Brussels Departure:Brussels Departure:126.625:BD:-:EBBR:DEP:-:-:7101:7137
+
+Brussels Approach:Brussels Arrival:118.250:BA:-:EBBR:APP:-:-:7101:7127
+Brussels Final Approach:Brussels Arrival:120.100:BF:F:EBBR:APP:-:-:7101:7127
+Brussels Approach:Brussels Arrival:123.200:BHLD:H:EBBR:APP:-:-:7101:7127
+
+; ACC ------------------------------------
+Brussels West/Combined Control:Brussels Control:131.100:BW:W:EBBU:CTR:-:-:7101:7177
+Brussels East Control:Brussels Control:129.575:BE:E:EBBU:CTR:-:-:7101:7177
+
+Brussels NLS Control:Brussels Control:128.800:BN:N:EBBU:CTR:-:-:7101:7177
+Brussels HUS Control:Brussels Control:128.200:BH:H:EBBU:CTR:-:-:7101:7177
+Brussels LUS Control:Brussels Control:125.000:BL:L:EBBU:CTR:-:-:7101:7177
+Brussels WHS Control:Brussels Control:127.225:BC:C:EBBU:CTR:-:-:7101:7177
+
+Brussels Supervisor:Brussels Supervisor:199.998:BSUP:S:EBBU:CTR:-:-:7101:7177
+Brussels Information:Brussels Information:126.900:BI:I:EBBU:CTR:-:-:0040:0047
+
+; UAC ------------------------------------
+Brussels Upper Control:Maastricht Radar:126.000:BU:U:EBBU:CTR:-:-:7101:7177
+
+Maastricht NIK:Maastricht Radar:135.975:YN:N:EDYY:CTR:-:-:7101:7177
+Maastricht LNO:Maastricht Radar:132.850:YO:O:EDYY:CTR:-:-:7101:7177
+Maastricht KOK:Maastricht Radar:132.200:YK:K:EDYY:CTR:-:-:7101:7177
+Maastricht LUX:Maastricht Radar:133.350:YL:L:EDYY:CTR:-:-:7101:7177
+
+;Maastricht NIK HIGH:Maastricht Radar:132.750:YNH:A:EDYY:CTR:-:-:7101:7177
+;Maastricht LUX HIGH:Maastricht Radar:132.350:YLH:Z:EDYY:CTR:-:-:7101:7177
+
+; EBAW  -----------------------------------
+EBAW_ATIS:Antwerp ATIS:124.200:WX:-:EBAW:ATIS:-:-:0000:0000
+Antwerp Ground:Antwerp Ground:121.900:WG:-:EBAW:GND:-:-:7130:7137
+Antwerp Tower:Antwerp Tower:135.200:WT:-:EBAW:TWR:-:-:7130:7137
+
+; EBCI -----------------------------------
+EBCI_ATIS:Charleroi ATIS:134.625:CX:-:EBCI:ATIS:-:-:0000:0000
+Charleroi Ground:Charleroi Ground:121.800:CG:-:EBCI:GND:-:-:7140:7147
+Charleroi Tower:Charleroi Tower:121.300:CT:-:EBCI:TWR:-:-:7140:7147
+Charleroi Approach:Charleroi Approach:133.125:CA:-:EBCI:APP:-:-:7140:7147
+
+; EBKT -----------------------------------
+Kortrijk Information:Kortrijk Information:120.250:KI:I:EBKT:TWR:-:-:7101:7177
+
+; EBLG -----------------------------------
+EBLG_ATIS:Liege ATIS:126.250:LX:-:EBLG:ATIS:-:-:0000:0000
+Liege Ground:Liege Ground:121.925:LG:-:EBLG:GND:-:-:7150:7157
+Liege Tower:Liege Tower:118.125:LT:-:EBLG:TWR:-:-:7150:7157
+Liege Approach:Liege Approach:119.275:LA:-:EBLG:APP:-:-:7150:7157
+
+; EBOS -----------------------------------
+EBOS_ATIS:Ostend ATIS:126.125:OX:-:EBOS:ATIS:-:-:0000:0000
+Ostend Ground:Ostend Ground:121.975:OG:-:EBOS:GND:-:-:7160:7170
+Ostend Tower:Ostend Tower:118.175:OT:-:EBOS:TWR:-:-:7160:7170
+Ostend Approach:Ostend Approach:120.600:OA:-:EBOS:APP:-:-:7160:7170
+
+; ELLX -----------------------------------
+ELLX_ATIS:Luxembourg ATIS:134.750:XX:-:ELLX:ATIS:-:-:0000:0000
+Luxembourg Delivery:Luxembourg Delivery:121.850:XD:-:ELLX:DEL:-:-:7171:7177
+Luxembourg Tower:Luxembourg Tower:118.100:XT:-:ELLX:TWR:-:-:7171:7177
+Luxembourg Approach:Luxembourg Approach:120.875:XA:-:ELLX:APP:-:-:7171:7177
+Luxembourg Approach:Luxembourg Director:118.900:XF:F:ELLX:APP:-:-:7171:7177
+
+; MIL ------------------------------------
+Chievres Tower:Chievres Tower:136.500:CVT:-:EBCV:TWR:-:-:7101:7177
