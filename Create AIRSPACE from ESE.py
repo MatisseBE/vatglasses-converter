@@ -25,7 +25,7 @@ def cleanup(file):
         if line != "":
             textfile += line.strip() + "\n"
     
-    return filter_string(textfile)
+    return filter_string(textfile.replace("�","·"))
 
 sectors = cleanup(sectors)
 sectors = sectors.split("\n\n")
@@ -37,24 +37,27 @@ sectordic = {}
 
 # Removes string OWNER from the line and returns all sector owners' names/ids
 def splitowners(line):
+    #print(line)
     line = [x for x in line if x.startswith("OWNER:")]
     try:
         return line[0].split(":")[1:]
     except:
+        # If this also fails: enable print and search for the owner name in the ese. Check if the line/list above/under is not empty/exists. This might be because the current line does not have a OWNER attirbute in the ESE.  - Check the ese!
         return line[0]
 
 # Removes string BORDER from the line and returns all borderlines' names/numbers
 def splitborders(line):
+    #print(line)
     line = [x for x in line if x.startswith("BORDER:")]
     try:
         return line[0].split(":")[1:]
     except:
+        # If this also fails: enable print and search for the border name in the ese. Check if the line/list above/under is not empty/exists. This might be because the current line does not have a BORDER attirbute in the ESE.  - Check the ese!
         return line[0]
     
 # Dictionary with information about the sectors (no coordinates yet, only border names/numbers)
 for sector in sectors:
     line = sector.split("\n")
-
     name = line[0].split(":")[1]
     low = line[0].split(":")[2]
     high = line[0].split(":")[3]
@@ -176,7 +179,7 @@ airspaces = []
 
 # Used to assign the sector a group based on the sectors' name
 def findname(sector):
-    sector = sector.split("·")[1].replace("_SCT", "")
+    sector = sector.split("·")[1]
 
     if sector.startswith("EB"):
         return "EBBU"
@@ -204,7 +207,7 @@ def findname(sector):
 for sector in sectordic.keys():
     try:
         print(sector)
-        name = sector.split("·")[1].replace("_SCT", "")
+        name = sector.split("·")[1]
         
         tmp = {}
         tmp["id"] = name
