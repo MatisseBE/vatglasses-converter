@@ -5,7 +5,7 @@
 
 #### 'Your GNG ESE file'
 
-1. In your text editor, perform a find and replace using REGEX (in VSC enable this icon:)![show regex symbol](https://cdn.discordapp.com/attachments/1071509192680153239/1071831914526298203/image.png)
+In your text editor, perform a find and replace using REGEX (in VSC enable this icon:)![show regex symbol](https://cdn.discordapp.com/attachments/1071509192680153239/1071831914526298203/image.png)
 This action will convert all your ES coordinates to the coordinate system used by vatglasses.
 
 **Attention**
