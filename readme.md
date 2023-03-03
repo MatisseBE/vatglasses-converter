@@ -7,8 +7,11 @@
 
 1. In your text editor, perform a find and replace using REGEX (in VSC enable this icon:)![show regex symbol](https://cdn.discordapp.com/attachments/1071509192680153239/1071831914526298203/image.png)
 This action will convert all your ES coordinates to the coordinate system used by vatglasses.
+
 **Attention**
+
 A) Convert for all hemispheres NESW (North, East, South, West). Currently, only coordinates that are in the NE hemisphere are converted. Perform as many find and replaces as neccessary.
+
 B) Check if the delimiter between two hemispheres is correct in the REGEX. Here ':' is used (character before "E"). Adapt if neccesarry and/or perform as many find and replaces as neccessary.
 ```
 Find: N0?([0-9]{2}).([0-9]{2}).([0-9]{1,2})(.[0-9]{3,})?:E([0-9]{3}).([0-9]{2}).([0-9]{1,2})(.[0-9]{3,})?
@@ -20,6 +23,7 @@ Replace: $1$2$3:$5$6$7
 ESE coordinate line
 COORD:N51.01.22:E005.13.15
 COORD:N51.02.16:E005.05.08
+
 New coordinate line with vatglasses coordinate system
 COORD:510122:0051315
 COORD:510216:0050508
