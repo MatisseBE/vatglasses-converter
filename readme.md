@@ -34,10 +34,13 @@ This file will contain the sector data from ESE. Take a look at the example.
 This are all the sectors with their corresponding owners and sectorlines (borders).
 From the GNG ESE, copy all **sector data** to this file as shown in the example. It may include comments. 
 
+**Important** Make sure to only include sectors from your vACC! You can do this by either excluding them from this txt file (CTR+F) OR filter them out later in the script with your own code. You should also leave out GND and DEL sectors.
+
 ### 'File with sectorslines for airspace.txt'
 This file will contain the **border coordinates** from ESE. Take a look at the example. 
 These are all the borders that surround a sector (at a certain FL-block).
 From the GNG ESE, copy all **sectorlines** to this file as shown in the example. It may include comments. 
+No need to filter here.
 
 ### 'File with positions for positions.txt'
 This file will contain **positions** from the ESE. Take a look at the example. 
