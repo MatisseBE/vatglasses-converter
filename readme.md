@@ -108,3 +108,4 @@ Optional: If there is no topdown structure, or the airport in uncontrolled, you 
 2. Next, format the file using the Prettier - Code formatter extention in VSC.
 3. Upload under the assigned file in the beta repo as assigned by vatglasse's dev. 
 
+Contact me on Discord if you have any questions. You will find me easily in VATSIM servers.
