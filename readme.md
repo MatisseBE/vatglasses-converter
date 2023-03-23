@@ -10,7 +10,7 @@ This action will convert all your ES coordinates to the coordinate system used b
 
 **Attention**
 
-A) Convert for all hemispheres NESW (North, East, South, West). Currently, only coordinates that are in the NE hemisphere are converted. Perform as many find and replaces as neccessary.
+A) Convert for all hemispheres NESW (North, East, South, West). Currently, only coordinates that are in the NE hemisphere are converted. Perform as many find and replaces as neccessary. Add a minus sign in the replace function for S and W.
 
 B) Check if the delimiter between two hemispheres is correct in the REGEX. Here ':' is used (character before "E"). Adapt if neccesarry and/or perform as many find and replaces as neccessary.
 ```
