@@ -1,6 +1,8 @@
 import json
 import re
 
+FIR_ids_for_this_vacc = ["EHAA"]
+
 
 # A file containing only SECTOR data, limited noise (white lines, comments) is allowed. 
 with open('Input/File With Sectors for AIRSPACE.txt',"r",encoding='utf-8') as f:
@@ -25,7 +27,7 @@ def cleanup(file):
         if line != "":
             textfile += line.strip() + "\n"
     
-    return filter_string(textfile.replace("�","·"))
+    return filter_string(textfile.replace("�","·").replace("�","·"))
 
 sectors = cleanup(sectors)
 sectors = sectors.split("\n\n")
@@ -179,25 +181,29 @@ airspaces = []
 
 # Used to assign the sector a group based on the sectors' name
 def findname(sector):
-    sector = sector.split("·")[1]
+    vacc = line.split("·")[0]
+    group = line.split("·")[1]
 
-    if sector.startswith("EB"):
-        return "EBBU"
+    if group.startswith("LSASZ"):
+        return "LSAZ"
 
-    elif sector.startswith("EL"):
-        return "ELLX"
+    # elif group.startswith("LSASG"):
+    #     return "LSAG"
     
-    elif sector.startswith("EDYY"):
-        return "EDYY"
+    # elif group.startswith("LSAS"):
+    #     return "LSAS"
     
-    elif sector.startswith("CBWV"):
-        return "CBWV"
+    # elif group.startswith("CBWV"):
+    #     return "CBWV"
 
-    elif sector.startswith("ZEELAND"):
-        return "ZEELAND"  
+    # elif group.startswith("ZEELAND"):
+    #     return "ZEELAND"  
 
-    elif sector.startswith("ACI"):  
-        return "ACI"
+    # elif vacc.startswith("ACI"):  
+    #     return "ACI"
+
+    # elif group.endswith("AREA"):  
+    #     return "AREA"
     
     ## Do NOT REMOVE, this is your fail safe - Do **not** add this key to your groups json
     else:
@@ -209,18 +215,22 @@ for sector in sectordic.keys():
         print(sector)
         name = sector.split("·")[1]
         
-        tmp = {}
-        tmp["id"] = name
-        tmp["group"] = findname(sector)
-        tmp["owner"] = sectordic[sector]["owners"]
-        tmp["sectors"] = [ {
-            "min" : int(int(sectordic[sector]["low"])/100) ,
-            "max": int(int(sectordic[sector]["high"])/100) -1,
-            "points" : getpoints(sectordic[sector]["borders"])
-        }]
+        if sector.split("·")[0] in FIR_ids_for_this_vacc: #If this sector is a sector of the vacc
+            tmp = {}
+            tmp["id"] = name
+            tmp["group"] = findname(sector)
+            tmp["owner"] = sectordic[sector]["owners"]
+            tmp["sectors"] = [ {
+                "min" : int(int(sectordic[sector]["low"])/100) ,
+                "max": int(int(sectordic[sector]["high"])/100) -1,
+                "points" : getpoints(sectordic[sector]["borders"])
+            }]
 
-        if tmp["sectors"][0]["points"] != None:
-                    airspaces.append(tmp)
+            if tmp["sectors"][0]["points"] != None and not name.endswith("GND") and not name.endswith("DEL"): #and "-GND" not in name
+                        airspaces.append(tmp)
+
+        else:
+            print("         not part of this vacc", FIR_ids_for_this_vacc)
 
     except:
         print("FAILED", sector)
