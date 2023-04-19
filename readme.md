@@ -91,7 +91,7 @@ Add a topdown structure!  (It's actually **bottum up** in this case - starting w
 "topdown":["BA","BD","BW","BE"]
 }
 ```
-Optional: If there is no topdown structure, or the airport in uncontrolled, you can add run the file again and add the value of the output straight to the vatglass json without a new key.
+Optional: If there is no topdown structure, or the airport in uncontrolled, you can run the file again and add the value of the output straight to the vatglass json without a new key. Before doing this, make sure you saved the first run, since the file will be overwritten.
 ![show regex symbol](https://cdn.discordapp.com/attachments/727230055301906483/1080591518273900565/image.png)
 
 ### What's next?
