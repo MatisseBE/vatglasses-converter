@@ -181,8 +181,8 @@ airspaces = []
 
 # Used to assign the sector a group based on the sectors' name
 def findname(sector):
-    vacc = line.split("·")[0]
-    group = line.split("·")[1]
+    vacc = sector.split("·")[0]
+    group = sector.split("·")[1]
 
     if group.startswith("LSASZ"):
         return "LSAZ"
