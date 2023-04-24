@@ -1,7 +1,7 @@
 import json
 import re
 
-FIR_ids_for_this_vacc = ["EHAA"]
+FIR_ids_for_this_vacc = ["LPPO"]
 
 
 # A file containing only SECTOR data, limited noise (white lines, comments) is allowed. 
@@ -170,10 +170,13 @@ def getpoints(borders):
     coordinates = []
     for b in borders:
         coordinates.append(linedic[b]["coor"])
+    coordinates = []
 
-    coordinates_copy = coordinates.copy()
-
-    return chain(coordinates_copy)
+    if len(coordinates) == 1:
+        return coordinates
+    else:    
+        coordinates_copy = coordinates.copy()
+        return chain(coordinates_copy)
 
 
 WordOfGodFinalDict = {}
