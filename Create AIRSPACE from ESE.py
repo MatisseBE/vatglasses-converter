@@ -170,7 +170,6 @@ def getpoints(borders):
     coordinates = []
     for b in borders:
         coordinates.append(linedic[b]["coor"])
-    coordinates = []
 
     if len(coordinates) == 1:
         return coordinates
