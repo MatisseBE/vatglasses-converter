@@ -172,7 +172,7 @@ def getpoints(borders):
         coordinates.append(linedic[b]["coor"])
 
     if len(coordinates) == 1:
-        return coordinates
+        return coordinates[0]
     else:    
         coordinates_copy = coordinates.copy()
         return chain(coordinates_copy)
