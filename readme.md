@@ -34,7 +34,7 @@ This file will contain the sector data from ESE. Take a look at the example.
 This are all the sectors with their corresponding owners and sectorlines (borders).
 From the GNG ESE, copy all **sector data** to this file as shown in the example. It may include comments. 
 
-**Important** Make sure to only include sectors from your vACC! You can do this by either excluding them from this txt file (CTR+F) OR filter them out later in the script with your own code. You should also leave out GND and DEL sectors.
+(**Important** Make sure to only include sectors from your vACC! You can do this by either excluding them from this txt file (CTR+F) OR filter them out later in the script with your own code. You should also leave out GND and DEL sectors.) This should no longer be necessary but use caution.
 
 ### 'File with sectorslines for airspace.txt'
 This file will contain the **border coordinates** from ESE. Take a look at the example. 
@@ -51,10 +51,12 @@ From the GNG ESE, copy all **positions** to this file as shown in the example. I
 This file creates the "airspace" key in the vatglass json.
 Here will will need to make some adjustments so the file can run without any problems. 
 
+On line 4 amend your FIR ids. For example: EBBU, EDGG or LTAA and LTBB
+
 On line 178 you will find the function *Findname(sector)*. This function is used to assign a sector to a group based on the name of the sector. The function strips the sector name and checks to which group it must belong and assigns it. You will need to change this function to your needs and groups. Don't forget to also change the first line.
 
 **Attention**
-"groups" Is another key in the vatglasse's json. You will need to create this part of the json manually. Make sure the groupkeys are identical between the function and json. Corresponding example for Belux in the vatglasse's json: 
+"groups" Is another key in the vatglasse's json. You can find it under output<gorupos.json. You will need to create this part of the json manually. Make sure the groupkeys are identical between the function and json. Corresponding example for Belux in the vatglasse's json: 
 ```
 "groups":{
 	"EBBU":{
