@@ -212,7 +212,7 @@ def findname(sector):
         return "OTHER"
 
 # Creates the output and is the heart of the code
-for sector in sectordic.keys():
+for sector in reversed(sectordic.keys()):
     try:
         print(sector)
         name = sector.split("·")[1]
