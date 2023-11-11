@@ -3,7 +3,10 @@
 
 #### Prerequisites
 VSC, Python extention in VSC
-Python
+
+Python itself
+
+
 Or whatever you want if you have the knowledge
 
 #### Note
