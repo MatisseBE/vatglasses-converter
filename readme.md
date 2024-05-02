@@ -2,12 +2,10 @@
 ## File preparations
 
 #### Prerequisites
-VSC, Python extention in VSC
+Python
 
-Python itself
+Personally, I used VSC and its Python exention, but you can use any editor you like of course.
 
-
-Or whatever you want if you have the knowledge
 
 #### Note
 I added an extra file that lets you update your positions without losing the current colors of your sectors. It will assign a random color for new sectors though. There is also a file that lets you check if any color is used more than once. This is only an issue if both sectors are adjacent to each other. Check the comments in the file for more information.
