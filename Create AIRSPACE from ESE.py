@@ -165,6 +165,17 @@ def chain(dominoes):
                 else:
                     return chain(dominoes)
 
+def removesequentialduplicates(coors):
+    new_coors = []
+    prev = ""
+    
+    for coor in coors:
+        if coor != prev:
+            new_coors.append(coor)
+        prev = coor
+    
+    return new_coors
+
 #Creates a nested list of the secotors' coordinates
 def getpoints(borders):
     coordinates = []
@@ -175,7 +186,7 @@ def getpoints(borders):
         return coordinates[0]
     else:    
         coordinates_copy = coordinates.copy()
-        return chain(coordinates_copy)
+        return removesequentialduplicates(chain(coordinates_copy))
 
 
 WordOfGodFinalDict = {}
